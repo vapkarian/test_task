@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+  {% if user.is_authenticated %}
+    <table cellpadding="5" style="border-collapse: collapse;margin-top: 30px;margin-bottom: 15px">
+      <tr>
+        <td>First name:</td>
+        <td>{{ user.profile.first_name }}</td>
+      </tr>
+      <tr>
+        <td>Last name:</td>
+        <td>{{ user.profile.last_name }}</td>
+      </tr>
+      <tr>
+        <td>Birthday:</td>
+        <td>{{ user.profile.birthday }}</td>
+        </tr>
+      <tr>
+        <td>Biography:</td>
+        <td>{{ user.profile.biography }}</td>
+      </tr>
+	  <tr>
+        <td>Contacts:</td>
+        <td>{{ user.profile.contacts }}</td>
+      </tr>
+    </table>
+  {% else %}
+    <p>Please login</p>
+  {% endif %}
+{% endblock %}
