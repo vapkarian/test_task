@@ -11,46 +11,11 @@
     {% endblock %}
   </head>
   <body>
-    <div class="main">
-      <div class="main_resize">
-        <div class="main_left">
-          <div class="logo">
-		    <a href="/"><img src="{{ STATIC_URL }}images/logo.gif" width="223" height="72" border="0" alt="logo" /></a>
-		  </div>
-          <div class="clr">
-		  </div>
-          <div class="menu">
-            <ul>
-              <li><a href="/"><span>Home page</span></a></li>
-              <li><a href="/groups/"><span>Groups</span></a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="main_right">
-          {% block body %}
-            <div class="content_title">
-              {% block content_title %}
-	 	      {% endblock %}
-            </div>
-            <div class="content">
-              {% block content %}
-		      {% endblock %}
-            </div>
-          {% endblock %}
-        </div>
-        <div class="clr">
-		</div>
-      </div>
-      {% block footer %}
-        <div class="footer">
-          <div class="footer_resize">
-            <p>© Copyright www.csstemplatesfree.org . All Rights Reserved.<br />
-            <a href="http://www.csstemplatesfree.org/minimalist.html">Minimalist style</a></p>
-            <div class="clr">
-			</div>
-          </div>
-        </div>
-      {% endblock %}
-    </div>
+    {% block body %}
+	  {% block content_title %}{% endblock %}
+      {% block content %}{% endblock %}
+    {% endblock %}
+    {% block footer %}
+    {% endblock %}
   </body>
 </html>
