@@ -102,6 +102,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'myprofile.middleware.QueriesGetter',
 )
 
 ROOT_URLCONF = 'test.urls'
@@ -115,6 +116,11 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'myprofile.context_processors.admin',
+    )
 
 AUTH_PROFILE_MODULE = 'profile.MyProfile'
 
