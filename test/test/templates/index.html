@@ -24,6 +24,8 @@
       </tr>
     </table>
 	<p>You may <a href="/accounts/edit/">change</a> profile or <a href="/accounts/logout/">logout</a>.</p>
+	{% load edit_link %}
+      {% edit_link user.profile %}
   {% else %}
     <p>Hello, anonymous. Please <a href="/accounts/login/">login</a>.</p>
   {% endif %}
