@@ -17,5 +17,8 @@
     {% endblock %}
     {% block footer %}
     {% endblock %}
+    {% if settings.DEBUG %}
+      <p>This site in developer mode</p>
+	{% endif %}
   </body>
 </html>
