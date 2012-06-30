@@ -1,0 +1,6 @@
+SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = ae3c831e6b8d49bbae26675bc512179c  AND "django_session"."expire_date" > 2012-06-30 21:39:30.878000 )
+
+SELECT "auth_user"."id", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."password", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."is_superuser", "auth_user"."last_login", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1 
+
+SELECT "myprofile_myprofile"."id", "myprofile_myprofile"."user_id", "myprofile_myprofile"."first_name", "myprofile_myprofile"."last_name", "myprofile_myprofile"."birthday", "myprofile_myprofile"."biography", "myprofile_myprofile"."contacts" FROM "myprofile_myprofile" WHERE "myprofile_myprofile"."user_id" = 1 
+
