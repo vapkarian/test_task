@@ -23,8 +23,8 @@
         <td>{{ user.profile.contacts }}</td>
       </tr>
     </table>
-	<p><a href="/accounts/logout/">Logout</a></p>
+	<p>You may <a href="/accounts/edit/">change</a> profile or <a href="/accounts/logout/">logout</a>.</p>
   {% else %}
-    <p>Hello, anonymous. Please <a href="/accounts/login/">login</a></p>
+    <p>Hello, anonymous. Please <a href="/accounts/login/">login</a>.</p>
   {% endif %}
 {% endblock %}

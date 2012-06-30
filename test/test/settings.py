@@ -123,7 +123,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'test.context_processors.settings',
     )
 
-AUTH_PROFILE_MODULE = 'profile.MyProfile'
+AUTH_PROFILE_MODULE = 'myprofile.MyProfile'
 
 INSTALLED_APPS = (
     'django.contrib.auth',

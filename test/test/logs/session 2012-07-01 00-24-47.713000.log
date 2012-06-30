@@ -1,0 +1,2 @@
+SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = f8724f6196336b9993e7d04833fccab4  AND "django_session"."expire_date" > 2012-06-30 21:27:42.742000 )
+
