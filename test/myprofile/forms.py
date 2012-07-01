@@ -1,11 +1,14 @@
-from django import forms
+from django.forms import ModelForm, Textarea
 from django.contrib.admin.widgets import AdminDateWidget
+from models import MyProfile
 
-class ChangeForm(forms.Form):
-    first_name = forms.CharField(max_length=35)
-    last_name = forms.CharField(max_length=50)
-    birthday = forms.DateField(required=False,widget=AdminDateWidget())
-    biography = forms.CharField(max_length=3000,
-                                required=False,widget=forms.Textarea)
-    contacts = forms.CharField(max_length=500,
-                               required=False,widget=forms.Textarea)
+class ChangeForm(ModelForm):
+    class Meta:
+        model = MyProfile
+        fields = ['first_name','last_name','birthday','biography','contacts']
+        fields.reverse()
+        widgets = {
+            'birthday': AdminDateWidget(),
+            'biography': Textarea(attrs={'cols': 40, 'rows': 10}),
+            'contacts': Textarea(attrs={'cols': 40, 'rows': 5}),
+        }
