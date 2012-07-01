@@ -1,3 +1,5 @@
+Profiles: login - Admin, password - Gfhjkm.
+
 Middlewares: QueriesGetter stores all database queries in special log dirictory 'logs'. One log file is created for one session.
 
 Context Processors: django.conf.settings is added to context.
