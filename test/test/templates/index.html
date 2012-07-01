@@ -3,24 +3,32 @@
   {% if user.is_authenticated %}
     <table cellpadding="5" style="border-collapse: collapse;margin-top: 30px;margin-bottom: 15px">
       <tr>
-        <td>First name:</td>
+        <td valign="TOP"><b>First name:</b></td>
         <td>{{ user.profile.first_name }}</td>
       </tr>
       <tr>
-        <td>Last name:</td>
+        <td valign="TOP"><b>Last name:</b></td>
         <td>{{ user.profile.last_name }}</td>
       </tr>
       <tr>
-        <td>Birthday:</td>
+        <td valign="TOP"><b>Birthday:</b></td>
         <td>{{ user.profile.birthday }}</td>
         </tr>
       <tr>
-        <td>Biography:</td>
+        <td valign="TOP"><b>Biography:</b></td>
         <td>{{ user.profile.biography }}</td>
       </tr>
 	  <tr>
-        <td>Contacts:</td>
+        <td valign="TOP"><b>Contacts:</b></td>
         <td>{{ user.profile.contacts }}</td>
+      </tr>
+	  <tr>
+        <td valign="TOP"><b>History:</b></td>
+        <td>
+		  {% for elem in user.profile.history.all %}
+		    <p>{{ elem }}</p>
+		  {% endfor %}
+		</td>
       </tr>
     </table>
 	<p>You may <a href="/accounts/edit/">change</a> profile or <a href="/accounts/logout/">logout</a>.</p>

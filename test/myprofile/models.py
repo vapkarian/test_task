@@ -1,3 +1,4 @@
+from django_history.models import HistoricalRecords
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -8,6 +9,7 @@ class MyProfile(models.Model):
     birthday = models.DateField(blank=True, null=True)
     biography = models.CharField(max_length=3000, blank=True)
     contacts = models.CharField(max_length=500, blank=True)
+    history = HistoricalRecords()
     def __unicode__(self):
         return '%s %s' % (self.first_name, self.last_name)
 
