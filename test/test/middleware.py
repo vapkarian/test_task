@@ -10,7 +10,7 @@ class QueriesGetter(object):
                                      '.log').replace('\\','/')
     def process_response(self,request,response):
         queries = connection.queries
-        with open(self.filename,'w') as log:
+        with open(self.filename,'a') as log:
             for q in queries:
                 log.writelines(q['sql']+'\n'+'\n')
         return response
